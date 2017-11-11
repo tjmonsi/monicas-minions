@@ -1,0 +1,13 @@
+:host {
+  position: relative;
+}
+
+::slotted(img) {
+  opacity: 1;
+  -webkit-transition: opacity 1s; /* Safari */
+  transition: opacity 1s;
+}
+
+::slotted(img.new) {
+  opacity: 0;
+}

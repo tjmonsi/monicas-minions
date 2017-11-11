@@ -1,0 +1,52 @@
+/*******************************
+          Other Layout
+*******************************/
+@mixin layout-block {
+  display: block;
+};
+@mixin layout-invisible {
+  visibility: hidden !important;
+};
+@mixin layout-relative {
+  position: relative;
+};
+@mixin layout-fit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+};
+@mixin layout-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+};
+@mixin layout-fullbleed {
+  margin: 0;
+  height: 100vh;
+};
+/* fixed position */
+@mixin layout-fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+};
+@mixin layout-fixed-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+};
+@mixin layout-fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+};
+@mixin layout-fixed-left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+};

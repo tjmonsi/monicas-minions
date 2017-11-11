@@ -1,0 +1,113 @@
+{
+  "app": {
+    "title": "PRPL FIRE",
+    "shortTitle": "PRPL FIRE",
+    "description": "Some of the things that I do on the web I do it here.",
+    "twitter": "",
+    "image": ""
+  },
+  "build": {
+    "name": "dev",
+    "baseHref": "/",
+    "analytics": "",
+    "firebaseVersion": "4.3.0",
+    "database": "dev",
+    "waitBeforeFetchingSameURLInRest": 60,
+    "sentryUrl": "",
+    "firebaseConfig": [
+    ]
+  },
+  "theme": {
+    "webApp": {}
+  },
+  "fragments": {
+    "landing-page": "prpl-fire-module/pages/landing-page",
+    "not-found-page": "prpl-fire-module/pages/not-found-page"
+  },
+  "routes": {
+    "defaultRedirect": "not-found-page",
+    "notFound": "not-found-page",
+    "routing": {
+      "/": {
+        "page": "landing-page"
+      }
+    }
+  },
+  "hosting": {
+    "rewrites": [],
+    "headers": [
+      {
+        "source" : "**/*.@(jpg|jpeg|gif|png)",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=7200"
+          }
+        ]
+      },
+      {
+        "source" : "404.html",
+        "headers" : [
+          {
+            "key" : "Cache-Control",
+            "value" : "max-age=300"
+          }
+        ]
+      },
+      {
+        "source": "service-worker.js",
+        "headers" : [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "routing-sw-src.js",
+        "headers" : [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "routing-sw.js",
+        "headers" : [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "sw.js",
+        "headers" : [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "workbox-routing.js",
+        "headers" : [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "workbox-sw.*.js",
+        "headers" : [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ]
+  }
+}

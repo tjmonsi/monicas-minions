@@ -1,0 +1,26 @@
+<dom-module id="fire-article">
+  <template>
+    <link rel="stylesheet" href="./index.scss">
+
+    <a href="#" class="banner-anchor">
+      <img src="[[article.image]]" class="banner-image" alt="[[article.title]]">
+    </a>
+    <h2 class="title">
+      <a href="#" class="title-anchor">
+        [[article.title]]
+      </a>
+    </h2>
+    <p class="summary">[[article.summary]]</p>
+
+    <footer class="footer">
+      <a href="#" class="avatar-anchor">
+        <img src="[[article.avatar]]" alt="[[article.name]]" class="avatar">
+      </a>
+
+      <address class="meta-text">
+        <span class="name">[[article.name]]</span><br>
+        <span class="date-read">[[article.date]] - [[article.read]] min read</span>
+      </address>
+    </footer>
+  </template>
+</dom-module>

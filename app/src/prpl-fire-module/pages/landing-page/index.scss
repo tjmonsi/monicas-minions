@@ -1,0 +1,69 @@
+@import '../../styles/mixins/flex';
+
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.banner {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-align-center;
+  padding: 10px;
+}
+
+.banner-text {
+  @include flex;
+}
+
+.banner-image {
+  @include flex;
+  display: block;
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.banner-title {
+  margin-top: 0px;
+}
+
+.banner-ctas {
+  @include display-flex;
+  @include flex-direction(row);
+}
+
+.button {
+  display: block;
+  padding: 10px 20px;
+  margin: 2px 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: inherit;
+
+  &.priority {
+    color: white;
+    background: black;
+    border-color: white;
+  }
+
+  &.priority:hover {
+    background: #666;
+  }
+}
+
+
+

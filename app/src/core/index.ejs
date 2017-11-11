@@ -1,0 +1,31 @@
+<%
+ const config = htmlWebpackPlugin.options.getConfig();
+ const theme = config.theme;
+ const head = require('./partials/head.ejs')({config, theme});
+ const router = require('./partials/router.ejs')({config});
+ const scripts = require('./partials/scripts.ejs')();
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Load Head Essentials here -->
+    <%= head %>
+
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Router here -->
+    <senti-header></senti-header>
+
+    <%= router %>
+
+    <!-- Load Scripts here -->
+    <%= scripts %>
+  </body>
+</html>
